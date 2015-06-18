@@ -46,7 +46,7 @@ using namespace WhirlyGlobe;
 
 @implementation WhirlyGlobeViewController
 {
-    bool isPanning,isRotating,isZooming,isAnimating;
+    bool isPanning,isRotating,isZooming,isAnimating,registerEvents;
 }
 
 - (id) init
@@ -61,6 +61,7 @@ using namespace WhirlyGlobe;
     _doubleTapDragGesture = true;
     _zoomTapFactor = 2.0;
     _zoomTapAnimationDuration = 0.1;
+    registerEvents= false;
     
     return self;
 }
@@ -182,7 +183,12 @@ using namespace WhirlyGlobe;
 {
     [super viewWillAppear:animated];
     
-    [self registerForEvents];
+    if (!registerEvents){
+        registerEvents = true;
+        [self registerForEvents];
+    }
+    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -197,8 +203,13 @@ using namespace WhirlyGlobe;
 {
     [super viewWillDisappear:animated];
     
+    if (registerEvents){
+        registerEvents = false;
+       [self unregisterForEvents];
+    }
+    
 	// Stop tracking notifications
-    [self unregisterForEvents];
+    
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     
 }
