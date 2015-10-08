@@ -2225,10 +2225,7 @@
 		2B11E0E915B4C030007AAE3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2246,17 +2243,14 @@
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "../WhirlyGlobeLib/include/ ../../third-party/boost/ ../../third-party/eigen/ ../../third-party/proj-4/src/ ../../third-party/KissXML/KissXML/ ../../third-party/ ../../third-party/protobuf/src/ $(SRCROOT)/include/private/ $(SRCROOT)/include/vector_tiles/ $(SRCROOT)/include/ ../../third-party/SMCalloutView/ ../../third-party/KissXML/KissXML/Additions/ ../../third-party/KissXML/KissXML/Categories/ ../../third-party/KissXML/KissXML/Private ../../third-party/fmdb/src/fmdb/ ../../third-party/AFNetworking/AFNetworking/ ../../third-party/AFNetworking/UIKit+AFNetworking/ \"$(SDKROOT)/usr/include/libxml2\" ../local_libs/aaplus";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "armv7s armv7 arm64";
+				VALID_ARCHS = "armv7s armv7 arm64 x86_64 i386";
 			};
 			name = Debug;
 		};
 		2B11E0EA15B4C030007AAE3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
@@ -2276,7 +2270,7 @@
 				STRIP_STYLE = all;
 				USER_HEADER_SEARCH_PATHS = "../WhirlyGlobeLib/include/ ../../third-party/boost/ ../../third-party/eigen/ ../../third-party/proj-4/src/ ../../third-party/KissXML/KissXML/ ../../third-party/ ../../third-party/protobuf/src/ $(SRCROOT)/include/private/ $(SRCROOT)/include/vector_tiles/ $(SRCROOT)/include/ ../../third-party/SMCalloutView/ ../../third-party/KissXML/KissXML/Additions/ ../../third-party/KissXML/KissXML/Categories/ ../../third-party/KissXML/KissXML/Private ../../third-party/fmdb/src/fmdb/ ../../third-party/AFNetworking/AFNetworking/ ../../third-party/AFNetworking/UIKit+AFNetworking/ \"$(SDKROOT)/usr/include/libxml2\" ../local_libs/aaplus";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "armv7s armv7 arm64";
+				VALID_ARCHS = "armv7s armv7 arm64 x86_64 i386";
 			};
 			name = Release;
 		};
